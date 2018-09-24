@@ -17,7 +17,7 @@
     <div class="row" id="mars-news">
       <div class="col-md-12">
         <h2>Latest Mars News</h2>
-        <h4>{{ mars_dictionary.mars_news[0] }}</h4>
+        <h5>{{ mars_dictionary.mars_news[0] }}</h5>
         <p>{{ mars_dictionary.mars_news[1] }}</p>
       </div>
     </div>
@@ -29,7 +29,7 @@
       </div>
       <div class="col-md-3">
         <div class="row" style="outline: 1px solid black">
-          <h4 style="padding-left:10px;">Current Weather on Mars</h4>
+          <h4 style="padding-left:10px;padding-top: 5px;">Current Weather on Mars</h4>
           <p style="padding-left:10px;">{{ mars_dictionary.mars_weather }}</p>
         </div>
         <div class="row">
@@ -38,14 +38,14 @@
         </div>
       </div>
     </div>
-
+<hr>
     <div class="row">
       <div class="col-md-12">
         <h2 style="text-align: center;">Mars Hemispheres</h2>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="padding-top: 10px;">
       <div class="col-md-6">
         <div class="card">
           <div class="card-img-top">
@@ -72,26 +72,38 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="padding-top: 10px">
       <div class="col-md-6">
-        {%  for title, url in mars_dictionary.mars_hemispheres[2].items()  %}
-        <img class="img-responsive" src="{{ url }}" width="100%">
-        <h4>{{  title  }}</h4>
-        {% endfor %}
+        <div class="card">
+          <div class="card-img-top">
+            {%  for title, url in mars_dictionary.mars_hemispheres[2].items()  %}
+            <img class="img-responsive" src="{{ url }}" width="100%">
+          </div>
+          <div class="card-body">
+            <h4 class="card-text">{{  title  }}</h4>
+            {% endfor %}
+          </div>
+        </div>
       </div>
       <div class="col-md-6">
-        {%  for title, url in mars_dictionary.mars_hemispheres[3].items()  %}
-        <img class="img-responsive" src="{{ url }}" width="100%">
-        <h4>{{  title  }}</h4>
-        {% endfor %}
+        <div class="card">
+          <div class="card-img-top">
+            {%  for title, url in mars_dictionary.mars_hemispheres[3].items()  %}
+            <img class="img-responsive" src="{{ url }}" width="100%">
+          </div>
+          <div class="card-body">
+            <h4 class="card-text">{{  title  }}</h4>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
 
 <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script></body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
