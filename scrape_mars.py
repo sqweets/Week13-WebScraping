@@ -92,9 +92,13 @@ def mars_weather(browser):
     soup = BeautifulSoup(response.text, 'lxml')
 
     # Find the latest weather tweet
-    weather_tweet = soup.find('div', attrs={"class": "tweet", "data-name": "Mars Weather"})
+    weather_tweets = soup.find_all('div', attrs={"class": "tweet", "data-name": "Mars Weather"})
 
-    mars_weather = weather_tweet.find('p', 'tweet-text').get_text()
+    for tweet in weather_tweets:
+        tweet_text = tweet.find('p', 'tweet-text').get_text()
+        if (tweet_text[0:3] == "Sol"):
+            mars_weather = tweet_text
+            break
 
     return mars_weather
 
